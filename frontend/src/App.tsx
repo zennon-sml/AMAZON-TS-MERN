@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar} from 'react-bootstrap';
-import HomePage from './pages/HomePage';
+import { Link, Outlet } from 'react-router-dom';
 
 function App() {
 
@@ -8,7 +8,9 @@ function App() {
       <header>
         <Navbar bg="dark" variant="dark" expand="lg">
           <Container>
-            <Navbar.Brand>amapinxer</Navbar.Brand>
+            <Link to={'/'}>
+              <Navbar.Brand>amapinxer</Navbar.Brand>
+            </Link>
           </Container>
           <Nav>
             <a href="/cart" className="nav-link">Carrinho</a>
@@ -18,7 +20,7 @@ function App() {
       </header>
       <main>
         <Container className="mt-3">
-            <HomePage />
+            <Outlet />{/* is where the routes we define will apear */}
         </Container>
       </main>
     <footer><div className="text-center">All rights reserved</div></footer>
