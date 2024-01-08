@@ -11,6 +11,7 @@ function ProductItem({ product }: {product: Product}) {
             </Link>
             <Card.Body>
                 <Link to={`/product/${product.slug}`}>
+                    <Card.Title>{product.name}</Card.Title>
                     <Rating rating={product.rating} numReviews={product.numReviews} />
                     <Card.Text>${product.price}</Card.Text>
                     {product.countInStock === 0 ? (
