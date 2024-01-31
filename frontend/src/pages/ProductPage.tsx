@@ -11,7 +11,6 @@ export default function ProductPage () {
     const { slug } = params
     const {
         data: product,
-        refetch,
         isLoading,
         error,
     } = useGetProductDetailsBySlugQuery(slug!)
@@ -29,7 +28,7 @@ export default function ProductPage () {
         :
         <div>
             <Helmet>
-                <title>ProductPage</title>
+                <title>product</title>
             </Helmet>
             ProductPage
         </div>
