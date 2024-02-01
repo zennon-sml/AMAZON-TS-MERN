@@ -1,19 +1,19 @@
-import React from 'react'
-import { HelmetProvider } from 'react-helmet-async';
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import { HelmetProvider } from "react-helmet-async";
+import ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
 } from "react-router-dom";
-import App from './App.tsx'
-import './index.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import HomePage from './pages/HomePage.tsx';
-import ProductPage from './pages/ProductPage.tsx'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import App from "./App.tsx";
+import "./index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import HomePage from "./pages/HomePage.tsx";
+import ProductPage from "./pages/ProductPage.tsx";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,11 +24,11 @@ const router = createBrowserRouter(
       {/* ... etc. */}
     </Route>
   )
-)
+);
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
@@ -36,5 +36,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </HelmetProvider>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

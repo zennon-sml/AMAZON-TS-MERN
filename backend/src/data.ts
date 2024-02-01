@@ -11,7 +11,7 @@ export const sampleProducts: Product[] = [
     brand: 'Nike',
     rating: 4.5,
     numReviews: 10,
-    description: 'folha',
+    description: 'Na brisa leve de uma tarde serena, Um pincher folha dança em pleno voo.'
   },
   {
     name: 'pincher normal',

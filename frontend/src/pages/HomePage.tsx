@@ -7,14 +7,14 @@ import ProductItem from "../components/ProductItem";
 import { Helmet } from "react-helmet-async";
 import { useGetProductsQuery } from "../hooks/productHooks";
 
-export default function HomePage () {
-  const { data: products, isLoading, error } = useGetProductsQuery()
+export default function HomePage() {
+  const { data: products, isLoading, error } = useGetProductsQuery();
   return isLoading ? (
     <LoadingBox />
   ) : error ? (
     <MessageBox variant="danger">{getError(error as ApiError)}</MessageBox>
   ) : (
-      <Row>
+    <Row>
       <Helmet>
         <title>AMAPINCHER</title>
       </Helmet>
@@ -24,5 +24,5 @@ export default function HomePage () {
         </Col>
       ))}
     </Row>
-    )
+  );
 }
